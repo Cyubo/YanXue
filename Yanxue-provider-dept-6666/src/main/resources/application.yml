@@ -1,0 +1,42 @@
+server:
+  port: 6666
+#spring信息
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://101.37.28.148/yan_xue_lv_xing?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: Tang-123456789
+
+  application:
+    name: YanXue-provider-dept-6666
+
+
+mybatis:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  configuration:
+    auto-mapping-behavior: full
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+
+#配置eureka的配制，服务注册的地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7002/eureka/,http://localhost:7001/eureka/
+  instance:
+    instance-id: YanXue-provider-dept6666 #修改eureka上的描述信息
+
+#开启服务降级 feign-hystrix
+feign:
+  hystrix:
+    enabled: true

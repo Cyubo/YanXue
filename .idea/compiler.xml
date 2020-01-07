@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="YanXueproviderservice" />
+        <module name="yanxueapi" />
+        <module name="YanXuetravel-eureka-7002" />
+        <module name="YanXuetravel-eureka-7001" />
+        <module name="yanxue-api" />
+        <module name="Yanxue-provider-dept-6666" />
+        <module name="YanXuetraveleureka7002" />
+        <module name="YanXuetraveleureka7001" />
+        <module name="YanXue-zuul" />
+        <module name="YanXuezuul" />
+      </profile>
+      <profile name="Annotation profile for YanXuetravel" enabled="true">
+        <sourceOutputDir name="../YanXue-provider-service/Yanxue-provider-dept-6666/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../YanXue-provider-service/Yanxue-provider-dept-6666/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Yanxueproviderdept6666" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="YanXueproviderservice" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

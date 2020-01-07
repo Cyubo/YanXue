@@ -1,0 +1,20 @@
+server:
+  port: 9527   #端口号的配置
+
+spring:
+  application:
+    name: YanXue-zuul  #服务注册的名字
+
+#将改服务注册到这三个集群的eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7002/eureka/,http://localhost:7001/eureka/
+
+  instance:
+    instance-id: zuul9527.com  #实例化的ip
+    prefer-ip-address: true  # 隐藏真实ip
+
+zuul:
+  routes:
+    mydept.serviceId: YanXue-provider-dept-6666 #别名指定的服务名

@@ -1,0 +1,20 @@
+#指定端口号
+server:
+  port: 7002
+
+#配置Eureka
+eureka:
+  instance:
+    hostname: eureka7002.com #Eureka 服务端的实例名称
+  client:
+    register-with-eureka: false #表示是否向eureka注册中心注册自己
+    fetch-registry: false #如果是false 表示自己是一个注册中心
+    service-url:
+      #配置集群
+      defaultZone: http://localhost:7002/eureka/,http://localhost:7001/eureka/
+
+
+#开启服务降级 feign-hystrix
+feign:
+  hystrix:
+    enabled: true
