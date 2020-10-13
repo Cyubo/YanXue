@@ -17,7 +17,7 @@
 
     <properties>
         <!--设置版本配置-->
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
     </properties>
 
     <dependencyManagement>
